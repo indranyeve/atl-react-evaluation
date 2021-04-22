@@ -42,15 +42,14 @@ let Courses = [
 
 function Home(){
     return(
-        <div className="container">
-            <div className="content row">
+        <div className="container-fluid">
+            <div className="mb-5">
                 <main className="main" role="main">
                     <section id="section-apprendre" className="homepage">
                         <div className="container">
                             <div className="row description-box d-flex flex-wrap justify-content-center">
                                 <div className="col-12 col-lg-8 text-center">
                                     <h2 className="homepage-title--alt2 color-langues">Apprendre le français</h2>
-
                                     <p className="homepage-descrip">Le centre de langues de
                                         l’Alliance française de Bangkok propose une large gamme de cours de
                                         français, répondant ainsi aux besoins des quelque 1 200 étudiants qui
@@ -59,7 +58,7 @@ function Home(){
                             </div>
                         </div>
                     </section>
-                    <section className="class-offer d-flex justify-content-lg-between">
+                    <section className="row">
                         {Courses.map((item, index) =>(
                             <Card
                                 id={item.id}

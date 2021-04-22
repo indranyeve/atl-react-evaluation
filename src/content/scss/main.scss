@@ -23,6 +23,11 @@ $red: #D43B3B;
     }
 }
 
+.card-master{
+    @media (max-width: 992px){
+        margin-bottom: 30px;
+    }
+}
 
 .card-courses{
     //border: 1px solid #000;
@@ -30,7 +35,8 @@ $red: #D43B3B;
     overflow-y: hidden;
     
     .item-thumnail{
-        height: 150px;
+        height: 190px;
+        overflow: hidden;
 
         img{
             width: 100%;
@@ -40,29 +46,39 @@ $red: #D43B3B;
         color: #fff;
     }
 
-   
+    
     @media (min-width: 992px) { 
         &:hover{
             cursor: pointer;
             > .card-detail{
-                top:40%;
-                /*height: 200px ;*/
+                top:0%;
+                height: 250px ;
+            }
+            > .courseName-container{
+                margin-top: 30px;
             }
         }
     }
 
+    .courseName-container{
+        position:relative;
+        margin-top: 18px;
+        transition: all .5s ease;
+    }
+
     .card-detail{
-        position:initial;
         font: {
             size: 11pt;
             weight:bold;
         }
+        background: #fff;
+        position:relative;
+        top: 3%;
+
         @media (min-width: 992px) {
-            background: #fff;
-            position: absolute;
             width: 100%;
             height: 180px;
-            top: 55%;
+            top: 12%;
             left: 0;
             right: 0;
             bottom: 0;

@@ -4,13 +4,13 @@ import RIGHTARROW from "../content/img/long-arrow-alt-right-solid.svg";
 
 const Card = (props: any) =>{
     return(
-        <div className="col-12 col-md-3 col-lg-3">
+        <div className="col-12 col-md-6 col-lg-3 card-master">
             <div className="card card-courses">
                 <div className="item-thumnail">
                     <img src={props.image} alt={props.alt}/>
                 </div>
-                <div className="card-detail text-center border d-flex justify-content-center align-content-between flex-wrap pt-5">
-                    <div>
+                <div className="card-detail text-center d-flex justify-content-center align-content-between flex-wrap">
+                    <div className="courseName-container">
                         <p className="course-name1">{props.courseName1}</p>
                         <p className="course-name2">{props.courseName2}</p>
                     </div>

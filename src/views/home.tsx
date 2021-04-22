@@ -12,58 +12,65 @@ import Image4 from "../content/img/centre-arts-peinture-eau-212x300.jpg";
 let Courses = [
     {
         id: "1",
-        img: {Image1},
+        img: Image1,
         alt:"imagen1",
-        courseName: "COURSE DE FRANÇAIS GENERAL",
+        courseName1: "COURSE DE ",
+        courseName2: "FRANÇAIS GENERAL"
     },
     {
         id: "2",
-        img: {Image3},
+        img: Image3,
         alt:"imagen2",
-        courseName: "COURSE POR ENFANTS",
+        courseName1: "COURSE POR ",
+        courseName2: " ENFANTS"
     },
     {
         id: "3",
-        img: {Image2},
+        img: Image2,
         alt:"imagen3",
-        courseName: "COURSE DE FRANÇAIS ESPÉCIALISÉ",
+        courseName1: "COURSE DE ",
+        courseName2: "FRANÇAIS ESPÉCIALISÉ"
     },
     {
         id: "4",
-        img: {Image4},
+        img: Image4,
         alt: "image4",
-        courseName: "DÉCOUVREZ NOS ATELIERS",
+        courseName1: "DÉCOUVREZ",
+        courseName2: "NOS ATELIERS"
     }
 ]
 
 function Home(){
     return(
         <div className="container">
-            <main className="main" role="main">
-                <section id="section-apprendre" className="homepage">
-                    <div className="container">
-                        <div className="row description-box d-flex flex-wrap justify-content-center">
-                            <div className="col-12 col-lg-8 text-center">
-                                <h2 className="homepage-title--alt2 color-langues">Apprendre le français</h2>
+            <div className="content row">
+                <main className="main" role="main">
+                    <section id="section-apprendre" className="homepage">
+                        <div className="container">
+                            <div className="row description-box d-flex flex-wrap justify-content-center">
+                                <div className="col-12 col-lg-8 text-center">
+                                    <h2 className="homepage-title--alt2 color-langues">Apprendre le français</h2>
 
-                                <p className="homepage-descrip">Le centre de langues de
-                                    l’Alliance française de Bangkok propose une large gamme de cours de
-                                    français, répondant ainsi aux besoins des quelque 1 200 étudiants qui
-                                    fréquentent chaque trimestre ses locaux.... </p>
+                                    <p className="homepage-descrip">Le centre de langues de
+                                        l’Alliance française de Bangkok propose une large gamme de cours de
+                                        français, répondant ainsi aux besoins des quelque 1 200 étudiants qui
+                                        fréquentent chaque trimestre ses locaux.... </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section className="class-offer d-flex justify-content-lg-between">
-                    {Courses.map((item, index) =>(
-                        <Card
-                            id={item.id}
-                            img={item.img}
-                            courseName={item.courseName}
-                        />
-                    ))}
-                </section>
-            </main>
+                    </section>
+                    <section className="class-offer d-flex justify-content-lg-between">
+                        {Courses.map((item, index) =>(
+                            <Card
+                                id={item.id}
+                                image={item.img}
+                                courseName1={item.courseName1}
+                                courseName2={item.courseName2}
+                            />
+                        ))}
+                    </section>
+                </main>
+            </div>
         </div>
     );
 }

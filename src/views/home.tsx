@@ -42,7 +42,7 @@ let Courses = [
 
 function Home(){
     return(
-        <div className="container-fluid">
+        <div className="container-fluid container mx-auto">
             <div className="mb-5">
                 <main className="main" role="main">
                     <section id="section-apprendre" className="homepage">
